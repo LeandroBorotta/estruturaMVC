@@ -1,0 +1,17 @@
+<?php
+require_once '../config/config.php';
+require_once '../vendor/autoload.php';
+
+use Core\App;
+use Core\Router;
+
+$router = new Router();
+
+$router->add('', 'HomeController', 'index'); 
+$router->add('teste', 'TesteController', 'index'); 
+$router->add('about', 'AboutController', 'index'); 
+
+$router->add('user/{id}/{nome}', 'TesteController', 'show');
+
+$app = new App($router);
+$app->run();
