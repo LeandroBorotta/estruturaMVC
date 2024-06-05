@@ -6,7 +6,8 @@
         },
         "files": [
             "app/Helpers/UrlHelper.php",
-            "app/Helpers/RouteHelper.php"
+            "app/Helpers/RouteHelper.php",
+            "app/Helpers/AuthHelper.php"
         ]
     }
 }
