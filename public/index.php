@@ -7,7 +7,7 @@ use Core\Router;
 
 $router = new Router();
 
-$router->add('', 'HomeController', 'index', true); 
+$router->add('', 'HomeController', 'index'); 
 $router->add('teste', 'TesteController', 'index'); 
 $router->add('login', 'AuthController', 'index'); 
 
