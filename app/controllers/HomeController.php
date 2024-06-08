@@ -7,11 +7,6 @@ use App\Models\Users;
 
 class HomeController extends Controller {
     public function index() {
-        
-        $user = Users::all();
-        
-        $teste = $user[1];
-        
 
         $nome = "João";
         $idade = 30;

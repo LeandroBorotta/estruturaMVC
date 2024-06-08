@@ -35,7 +35,15 @@ class App
             }
 
             if (method_exists($this->controller, $this->method)) {
-
+                if($routeInfo['requiresAuth']){
+                    if(isLoggedIn()){
+                        call_user_func_array([$this->controller, $this->method], $this->params);
+                    }else{
+                        $routeBack = BASE_URL . "login";
+                        header("Location: $routeBack");
+                        exit;
+                    }
+                }
                 call_user_func_array([$this->controller, $this->method], $this->params);
             } else {
                 die("Método não encontrado: " . $this->method);

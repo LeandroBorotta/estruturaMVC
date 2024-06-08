@@ -6,9 +6,9 @@ class Router
 {
     private $routes = [];
 
-    public function add($route, $controller, $method = 'index')
+    public function add($route, $controller, $method = 'index', $requiresAuth = false)
     {
-        $this->routes[$route] = ['controller' => $controller, 'method' => $method];
+        $this->routes[$route] = ['controller' => $controller, 'method' => $method, 'requiresAuth'=> $requiresAuth];
     }
 
     public function getRoute($route)
