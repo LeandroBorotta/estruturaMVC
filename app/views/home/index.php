@@ -6,7 +6,8 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Bem-vindo ao Home!</h1>
+<?php renderComponent("header"); ?>
+    
 
     <p>Nome: <?php echo $nome; ?></p>
     <p>Idade: <?php echo $idade; ?></p>
