@@ -33,7 +33,7 @@ class PaginateService {
         return $this->total_de_paginas;
     }
 
-    public function criarLinksPaginacao($url) {
+    public function links($url) {
         $links = "";
         for ($i = 1; $i <= $this->total_de_paginas; $i++) {
             $links .= "<a href='{$url}?pagina={$i}'>{$i}</a> ";
@@ -41,4 +41,4 @@ class PaginateService {
         return $links;
     }
 }
-?>
+

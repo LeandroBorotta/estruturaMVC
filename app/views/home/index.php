@@ -23,7 +23,7 @@
 
 
     <div>
-        <?= $paginate->criarLinksPaginacao(""); ?>
+        <?= $paginate->links(""); ?>
     </div>
 
 
