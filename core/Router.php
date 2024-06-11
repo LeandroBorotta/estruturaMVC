@@ -48,7 +48,7 @@ class Router
     }
 
 
-    public function match($url): array|null
+    public function match($url): ?array
     {
         foreach ($this->routes as $route => $info) {
             if ($route === $url) {
